@@ -1,0 +1,37 @@
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+
+ 
+}
+div#lab{
+	display: block; /* La balise devient de type block. */
+	width: 200px;
+}
+
+form button
+{
+  height: 50px;
+  width: 200px
+}
+
+
+
+input:invalid {
+  background-color: #ffdddd;
+}
+
+  
+input:valid {
+  background-color: #ddffdd;
+}
+ 
+input:required {
+  border-color: #800000;
+  border-width: 3px;
+}

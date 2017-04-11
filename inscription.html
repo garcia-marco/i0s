@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="inscription.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="inscription" method="post">
+
+        <div id="gr">
+            <input type="radio" name="genre" required/> <label>Monsieur</label>
+            <input type="radio" name="genre" required/> <label>Madame</label>
+            <input type="radio" name="genre" required /> <label>Mademoiselle</label><br />
+
+        </div>
+
+        <div id="lab">
+            <br>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom">
+            <br>
+            <br>
+
+            <label for="prenom">Prenom</label>
+            <input type="text" name="prenom">
+            <br>
+            <br>
+            <!--E-mail:-->
+            <label for="mail">E-mail:</label>
+            <input type="email" placeholder="nom@quelquechose.com" id="mail" name="user_email" />
+            <br>
+            <br>
+            <!--Date naissance              -->
+            <label for="date">Date naissance</label>
+            <input type="date" name="dt"><br> <br>
+            <!--Telephone-->
+            <label for="date">Téléphone</label>
+            <input type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+            <br>
+            <br>
+            <!--Compte GitHub-->
+            <label for="urlG">GuitHub</label>
+            <input type="url" name="urlG"><br> <br>
+            <!--linkedin-->
+            <label for="lkin">linkedin</label>
+            <input type="url" name="urlk"><br> <br>
+            <!--texte de présentation-->
+            <textarea placeholder="Présente-toi en quelques mots" name="message" rows="10" cols="50"></textarea><br>
+            <button type="button" onclick="alert('Bonjour')">Inscription</button>
+            <br>
+            <br>
+            
+
+        </div>
+
+    </form>
+
+
+
+</body>
+
+</html>

@@ -1,20 +1,28 @@
 // Nombre de Questions
 var nbQuestions = 3;
 
-//Initialise les réponses et questions
+// Variable pour la note finale
+var grade = 0;
+
+
+
+// Initialise les réponses et questions
 var allAnswer = [];
-var allQuestions = [];
+var allRadios = [];
 
 function init() {
-    for (let a = 0; a < nbQuestions; a++) {
-        var currentAnswer = "answer" + a;
+
+    for (let i = 0; i < nbQuestions; i++) {
+        var currentAnswer = "answer" + i;
         allAnswer.push(document.getElementById(currentAnswer));
 
-        var currentQuestion = "question" + a;
-        allQuestions.push(document.getElementsByName(currentQuestion));
+        var currentQuestion = "radiosQ" + i;
+        allRadios.push(document.getElementsByName(currentQuestion));
     }
 };
 init();
+
+
 
 // Se lance si clique sur bouton
 document.getElementById("submit").onclick = function click() {
@@ -27,6 +35,8 @@ document.getElementById("submit").onclick = function click() {
     }
 };
 
+
+
 // Se lance si tout est checked
 function answerAll() {
 
@@ -35,17 +45,20 @@ function answerAll() {
     addAnimation();
 
     // Changement de texte du bouton et désactivation de celui-ci
+    document.getElementById("sur20").innerHTML = "Vous avez " + grade + "/20"
     document.getElementById("submit").innerHTML = "Merci d'avoir pris le temps de répondre";
-    document.getElementById("submit").setAttribute("disabled", "disabled")
-
+    document.getElementById("submit").disabled = true;
 };
+
+
 
 // Boucle pour vérifier que tout est checké
 function checking() {
     var ifCheck = 0;
-    for (let i in allQuestions) {
-        for (let j in allQuestions[i]) {
-            if (allQuestions[i][j].checked) {
+
+    for (let i in allRadios) {
+        for (let j in allRadios[i]) {
+            if (allRadios[i][j].checked) {
                 ifCheck += 1;
             }
         }
@@ -53,20 +66,46 @@ function checking() {
     return ifCheck;
 };
 
-// Boucle pour ajouter les réponses
+
+
+// Boucle pour ajouter les réponses et pour calculer la note
 function addAnswer() {
-    for (let i in allQuestions) {
-        for (let j in allQuestions[i]) {
-            if (allQuestions[i][j].checked) {
-                allAnswer[i].innerHTML = allQuestions[i][j].value;
+
+    for (let i in allRadios) {
+        for (let j in allRadios[i]) {
+            if (allRadios[i][j].checked) {
+
+                // Ajoute 1 si réponse juste
+                if (allRadios[i][j].value.substring(0, 5) == "Bonne") {
+                    grade += 1;
+                }
+                allAnswer[i].innerHTML = allRadios[i][j].value;
             }
+
+
         }
     }
 };
 
+
+
 //Boucle pour ajouter l'animation
 function addAnimation() {
+
+    document.getElementById("sur20").classList.add("appear");
     for (let i in allAnswer) {
-        allAnswer[i].setAttribute("class", "appear");
+        allAnswer[i].classList.add("appear");
+    }
+};
+
+var progressBar = 0;
+
+// Boucle pour barre de progression
+for (let i in allRadios) {
+    for (let j in allRadios[i]) {
+        allRadios[i][j].onclick = function progress() {
+            progressBar += 1;
+            console.log(progressBar);
+        }
     }
 };

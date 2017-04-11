@@ -7,14 +7,22 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#container {
-    margin-top: 100px;
+.container {
+    margin-top: 20px;
     display: flex;
 }
 
-#buttonSubmit {
-    display: flex;
-    margin-top: 30px;
+#sur20 {
+    text-align: center;
+    margin : auto;
+    opacity: 0;
+    transition: all 2s;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+#pourcent {
+    margin : auto;
 }
 
 .form {
@@ -44,22 +52,11 @@ html, body {
     margin: auto;
  }
 
-#answer0 {
+.answer {
     opacity: 0;
-    transition: opacity 2s;
     margin-top: 10px;
-}
+    transition: all 2s;
 
-#answer1 {
-    opacity: 0;
-    transition: opacity 2s;
-    margin-top: 10px;
-}
-
-#answer2 {
-    opacity: 0;
-    transition: opacity 2s;
-    margin-top: 10px;
 }
 
 .appear {

@@ -1,5 +1,5 @@
 // Nombre de Questions
-var nbQuestions = 3;
+var nbQuestions = 5;
 
 // Variable pour la note finale
 var grade = 0;
@@ -13,11 +13,8 @@ var allRadios = [];
 function init() {
 
     for (let i = 0; i < nbQuestions; i++) {
-        var currentAnswer = "answer" + i;
-        allAnswer.push(document.getElementById(currentAnswer));
-
-        var currentQuestion = "radiosQ" + i;
-        allRadios.push(document.getElementsByName(currentQuestion));
+        allAnswer.push(document.getElementById("answer" + i));
+        allRadios.push(document.getElementsByName("radiosQ" + i));
     }
 };
 init();
@@ -31,7 +28,7 @@ document.getElementById("submit").onclick = function click() {
         answerAll();
     }
     else {
-        document.getElementById("submit").innerHTML = "Répondez à toutes les questions!";
+        document.getElementById("submit").innerHTML = "Incomplet";
     }
 };
 
@@ -45,9 +42,10 @@ function answerAll() {
     addAnimation();
 
     // Changement de texte du bouton et désactivation de celui-ci
-    document.getElementById("sur20").innerHTML = "Vous avez " + grade + "/20"
+    document.getElementById("sur20").innerHTML = "Vous avez " + grade + " bonnes réponses sur 20!"
     document.getElementById("submit").innerHTML = "Merci d'avoir pris le temps de répondre";
     document.getElementById("submit").disabled = true;
+    document.getElementById("form").disabled = true;
 };
 
 
@@ -77,12 +75,11 @@ function addAnswer() {
 
                 // Ajoute 1 si réponse juste
                 if (allRadios[i][j].value.substring(0, 5) == "Bonne") {
+                    allAnswer[i].classList.add("good");
                     grade += 1;
                 }
                 allAnswer[i].innerHTML = allRadios[i][j].value;
             }
-
-
         }
     }
 };
@@ -98,14 +95,13 @@ function addAnimation() {
     }
 };
 
+
+
+// Boucle pour barre de progression et réinitialiser bouton
 var progressBar = 0;
 
-// Boucle pour barre de progression
-for (let i in allRadios) {
-    for (let j in allRadios[i]) {
-        allRadios[i][j].onclick = function progress() {
-            progressBar += 1;
-            console.log(progressBar);
-        }
+document.getElementById("form").onchange = function() {
+    if (checking() == nbQuestions) {
+        document.getElementById("submit").innerHTML = "Valider";
     }
 };

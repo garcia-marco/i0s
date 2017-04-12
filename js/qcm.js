@@ -1,10 +1,23 @@
+
+
+
+
+
+
+
+
+
+// Questionnaire
+
+
+
+
+
 // Nombre de Questions
 var nbQuestions = 5;
 
 // Variable pour la note finale
 var grade = 0;
-
-
 
 // Initialise les réponses et questions
 var allAnswer = [];
@@ -105,3 +118,18 @@ document.getElementById("form").onchange = function() {
         document.getElementById("submit").innerHTML = "Valider";
     }
 };
+
+
+
+
+
+// Fin du Questionnaire
+
+
+
+
+
+
+
+
+

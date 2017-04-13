@@ -82,7 +82,7 @@ li {
 }
 
 .test {
-    background: white;
+ background: linear-gradient(white, #fd9d45, #fd4932);
     margin: auto;
     margin-top : 15%;
 

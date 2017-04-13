@@ -55,10 +55,9 @@ function answerAll() {
     addAnimation();
 
     // Changement de texte du bouton et désactivation de celui-ci
-    document.getElementById("sur20").innerHTML = "Vous avez " + grade + " bonnes réponses sur 20!"
+    document.getElementById("sur20").innerHTML = "Vous avez " + grade + " bonnes réponses sur " + nbQuestions +"!";
     document.getElementById("submit").innerHTML = "Merci d'avoir pris le temps de répondre";
     document.getElementById("submit").disabled = true;
-    document.getElementById("form").disabled = true;
 };
 
 
@@ -84,6 +83,8 @@ function addAnswer() {
 
     for (let i in allRadios) {
         for (let j in allRadios[i]) {
+            allRadios[i][j].disabled = true;
+
             if (allRadios[i][j].checked) {
 
                 // Ajoute 1 si réponse juste
@@ -113,7 +114,7 @@ function addAnimation() {
 // Boucle pour barre de progression et réinitialiser bouton
 var progressBar = 0;
 
-document.getElementById("form").onchange = function() {
+document.getElementById("form").onchange = function () {
     if (checking() == nbQuestions) {
         document.getElementById("submit").innerHTML = "Valider";
     }

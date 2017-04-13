@@ -10,6 +10,12 @@ document.getElementById("icon").onclick = function () {
     animMenu();
 };
 
+sombre.onclick = function () {
+    if (classSombre[0]) {
+        animMenu();
+    }
+};
+
 function animMenu() {
 
     if (nav.style.right == "100%") {
@@ -20,8 +26,8 @@ function animMenu() {
         slash[0].style.top = "12px";
         slash[2].style.top = "-12px";
 
-        slash[0].style.transform = "rotate(40deg)";
-        slash[2].style.transform = "rotate(-40deg)";
+        slash[0].style.transform = "rotate(220deg)";
+        slash[2].style.transform = "rotate(-220deg)";
 
     }
     else {
@@ -37,15 +43,13 @@ function animMenu() {
     }
 
     sombre.classList.toggle("sombre");
-    slash[0].classList.toggle("colorHamb");
-    slash[1].classList.toggle("colorHamb");
-    slash[2].classList.toggle("colorHamb");
 
-};
+    /*  slash[0].classList.toggle("colorSlash");
+      slash[1].classList.toggle("colorSlash");
+      slash[2].classList.toggle("colorSlash"); */
 
-
-sombre.onclick = function () {
-    if (classSombre[0]) {
-        animMenu();
+    for (let i in slash) {
+        slash[i].classList.toggle("colorSlash");
     }
+
 };

@@ -52,6 +52,10 @@ li {
     margin-top:0px;
 }
 
+.colorHamb {
+    background-color: black;
+}
+
 #sombre {
     z-index: 3;
     position: fixed;
@@ -61,10 +65,8 @@ li {
 }
 
 .sombre {
-    position: fixed;
-    height: 100%;
-    width: 100%;
     background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 #fond {

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden ;
+
+    background: linear-gradient(#fd9d45, #fd4932); 
+
+    font-family: 'Roboto' , sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+}
+
+/*Barre de progression */
+/***********************/
+#myBar {
+    margin-top: 10px;
+    width: 0%;
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 20px;  
+    color: white; 
+    transition: width 1s, opacity 2s;
+   
+}
+/************************/
+
+
+
+#sur20 {
+    text-align: center;
+    margin : auto;
+    opacity: 1;
+    transition: all 2s;
+    font-size: 2em;
+    font-weight: lighter;
+    margin-bottom: 20px; 
+}
+
+#pourcent {
+    margin : auto;
+}
+
+#formulaire {
+    background: white;
+   /* box-shadow: 0px 0px 15px #999999; */
+    margin: auto;
+    padding: 30px 40px;
+    height: 90%;
+    width: 50%;
+}
+#form {
+    overflow: hidden;
+    overflow-y: auto;
+    margin: auto;
+    height: 29.5em;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.ques {
+    margin-top: 10px;
+}
+
+#submit {
+    border: 0px;
+    margin: auto;
+    margin-top: 20px; 
+    padding: 10px ;
+    background: #3cb878;
+    transition: all 200ms;
+    color: white;
+    font-size: 1em;
+ }
+
+ #submit:hover {
+    background: #36a86e;
+    cursor: pointer;
+ }
+
+ #submit:focus {
+    outline: 0px;
+ }
+
+.answer {
+    margin: 10px 0 15px 0;
+    opacity: 0;
+    transition: opacity 1s;
+    transition: padding 1s;
+    border-style: dashed;
+    color : #FF1815;
+    background: rgba(255, 24, 21, 0.25);
+    border-color:  rgba(255, 24, 21, 0.5);
+
+}
+
+.appear {
+    opacity: 1 !important;
+    padding: 10px;
+}
+
+.good {
+    color : #3cb878 !important;
+    background: rgba(60, 184, 120, 0.25)!important;
+    border-color:  rgba(60, 184, 120, 0.5)!important;
+    
+}

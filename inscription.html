@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="inscription.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="inscription" method="post">
+
+
+        <div id="lab">
+            <br>
+
+            <!--nom-->
+            <label for="nom" id="lNom"style="float: left;">Nom</label>
+            <input type="text" id="iNnom" style="float: right;" class="nom">
+
+<br>
+            <br>
+            <!--prenom-->
+            <label for="prenom"style="float: left;">Prenom</label>
+            <input type="text" id="iPren" style="float: right;"  name="prenom">
+
+            <br>
+            <br>
+            <!--E-mail:-->
+            <label for="mail"style="float: left;">E-mail</label>
+            <input style="float: right;" type="email" placeholder="nom@quelquechose.com" id="mail" name="user_email" />
+
+<br>
+            <br>
+            <!--Telephone-->
+            <label for="date"style="float: left;">Téléphone</label>
+            <input style="float: right;"  id="tel" type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+            <br>
+            <br>
+            <!--Compte GitHub-->
+            <label style="float: left;">GitHub</label>
+            <input style="float: right;"  type="url" id="urlG" name="urlG">
+            <br>
+            <br>
+            <!--linkedin-->
+            <label style="float: left;" for="lkin">linkedin</label>
+            <input style="float: right;"  type="url" id="urlk"><br> <br>
+            <!--texte de présentation-->
+            <textarea id="content" placeholder="Présente-toi en quelques mots" name="message" rows="10" cols="50"></textarea><br>
+            <button type="submit" id="btInscrip">Inscription</button>
+            <br>
+            <br>
+
+
+        </div>
+
+    </form>
+
+
+
+
+    <script src="inscription.js">
+
+    </script>
+
+</body>
+
+</html>

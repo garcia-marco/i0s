@@ -1,0 +1,55 @@
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  display: flex;
+  
+
+ 
+}
+div#lab{
+ display: inline-block;
+  margin: auto;
+}
+
+form button
+{
+
+  height: 50px;
+  width: 200px;
+  margin: auto;
+  
+  
+}
+
+
+
+#gauche
+{
+  left: 0;
+}
+
+#droite{
+right: 0;
+}
+
+input:focus {
+  
+  background-color: #ddffdd;
+   border: 2px solid black;
+}
+input:invalid {
+  background-color: #ffdddd;
+}
+
+  input:required {
+  border-color: #800000;
+  border-width: 3px;
+}
+input#iNnom , input#iPren {
+  text-transform: uppercase;
+}

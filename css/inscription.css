@@ -204,10 +204,6 @@ li {
     margin-bottom: 10px; 
 }
 
-#pourcent {
-    margin : auto;
-}
-
 #formulaire {
     background: white;
     margin: auto;
@@ -239,7 +235,7 @@ li {
 #submit {
     border: 0px;
     margin: auto;
-    width: auto;
+    width: auto;;
     height: auto;
     margin-top: 20px; 
     padding: 10px ;
@@ -266,9 +262,9 @@ li {
     transition: opacity 1s;
     transition: padding 0.5s;
     border-style: dashed;
-    color : #FF1815;
-    background: rgba(255, 24, 21, 0.25);
-    border-color:  rgba(255, 24, 21, 0.5);
+    color : #fd4932;
+    background: rgba(253, 73, 50, 0.25);
+    border-color:  rgba(253, 73, 50, 0.5);
 
 }
 
@@ -287,10 +283,11 @@ li {
 /*Barre de progression */
 /***********************/
 #myBar {
+    margin: auto;
     margin-bottom: 20px;
     width: 0%;
     height: 25px;
-    background-color: #3cb878;
+    background: linear-gradient( 90deg,#3cb878, #36a86a);
     text-align: center;
     line-height: 25px;  
     color: white; 

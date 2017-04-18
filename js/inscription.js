@@ -88,7 +88,7 @@ document.getElementById("picto").onclick = function () {
 
 
 // Nombre de Questions
-var nbQuestions = 5;
+var nbQuestions = 10;
 
 // Variable pour la note finale
 var grade = 0;

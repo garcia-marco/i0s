@@ -56,13 +56,9 @@ function animMenu() {
 
     sombre.classList.toggle("sombre");
 
-    slash[0].classList.toggle("colorSlash");
-    slash[1].classList.toggle("colorSlash");
-    slash[2].classList.toggle("colorSlash");
-
-    /* for (let i in slash) {
-        slash[i].classList.toggle("colorSlash"); 
-    } */
+    for (let i = 0; i < slash.length; i++) {
+        slash[i].classList.toggle("colorSlash");
+    }
 };
 
 
@@ -76,7 +72,15 @@ function animMenu() {
 
 
 //Scroll
-var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
+
+document.getElementById("picto").onclick = function () {
+    var scroll = document.getElementById("body");
+    scroll.scrollIntoView({ block: "end", behavior: "smooth" });
+
+
+};
+
+
 // Questionnaire
 
 
@@ -172,8 +176,6 @@ function addAnswer() {
 
 //Boucle pour ajouter l'animation
 function addAnimation() {
-
-    document.getElementById("sur20").classList.add("appear");
     for (let i in allAnswer) {
         allAnswer[i].classList.add("appear");
     }
@@ -182,25 +184,45 @@ function addAnimation() {
 
 
 // Boucle pour barre de progression et réinitialiser bouton
-var progressBar = 0;
+var progressBar = document.getElementById("myBar");
 
-document.getElementById("form").onchange = function () {
-    if (checking() == nbQuestions) {
+
+
+
+
+/**Cette fonction detecte tout changement sur le formulaire 
+ * 1-Permet la possibilité de valider le formulaire
+ * 2-Avancer la barre de progression 
+ */
+
+document.getElementById("form").onchange = function ()
+{
+    var radioChecked = checking();// on stock le resultat de la fonction pour eviter de l'appeler plusieurs fois
+
+
+    //si tout les champs sont remplis on active le boutton valider , 
+    //
+    if (radioChecked == nbQuestions) //on comparre au nombre de questions checker (-via fonction cheking()-) à nbQuestions qui est une variable globale precedement defenie
+    {
+
         document.getElementById("submit").innerHTML = "Valider";
+      //  progressBar.style.opacity =0; // quand la barre atteint 100%, on la cache puisque elle sert plus à rien
     }
+
+    // pour faire bouger la progressBar il suffit simplement de changer sa width ( largeur)
+    progressBar.style.width =
+        (
+            Math.floor // Math.floor  pour enlever avoir des chiffres ronds cad sans virgules ...
+                (
+                (radioChecked * 100) / nbQuestions // on calcule le pourcentage des questions  repondu par rapport au nombre de questions total 
+                )
+        )
+        + "%"; // <== faut pas l'oublier lui
+
+    //On change bien évidament le chiffre qui est dans la barre de progression par la width fraichement affecter
+    progressBar.innerHTML = progressBar.style.width
+
+
+
+    // document.getElementById("counter").innerHTML = "il reste " + (nbQuestions - checking() )+ " à repondre"
 };
-
-
-
-
-
-// Fin du Questionnaire
-
-
-
-
-
-
-
-
-

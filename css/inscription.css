@@ -9,8 +9,6 @@ html, body {
     padding: 0;
 
     font-family: 'Roboto' , sans-serif;
-    scroll-behavior: smooth;
-
 }
 
 
@@ -37,7 +35,7 @@ html, body {
     top: 3%;
     right: 3%;   
     width: 5em;
-    height: 5em;
+    height: 4.985351319em;
     z-index: 5;
     transition: all 0.5s;
 }
@@ -150,9 +148,10 @@ li {
 
 
 #body {
-    background: linear-gradient(white, #fd9d45, #fd4932);
+    background: linear-gradient( white,#fd9d45, #fd4932);
 
     box-shadow: 0 0 20px black;
+    height: auto;
 }
 
 .white {
@@ -163,6 +162,7 @@ li {
 
 .graph{
     width: 100%;
+    margin-bottom: -8%;
 }
 
 .width {
@@ -201,7 +201,7 @@ li {
     transition: all 2s;
     font-size: 2em;
     font-weight: bolder;
-    margin-bottom: 20px; 
+    margin-bottom: 10px; 
 }
 
 #pourcent {
@@ -215,6 +215,11 @@ li {
     padding: 30px 40px;
     width: 70%;
     transition : all 1s;
+    border-radius: 10px; 
+}
+
+#formulaire:hover {
+    box-shadow: 0 0 10px #666666;
 }
 
 #form {
@@ -278,3 +283,40 @@ li {
     border-color:  rgba(60, 184, 120, 0.5)!important;
     
 }
+
+/*Barre de progression */
+/***********************/
+#myBar {
+    margin-bottom: 20px;
+    width: 0%;
+    height: 25px;
+    background-color: #3cb878;
+    text-align: center;
+    line-height: 25px;  
+    color: white; 
+    border-radius: 5px; 
+    transition: width 1s, opacity 2s;
+   
+}
+/************************/
+
+
+/* Footer */
+
+
+#footer {
+    height: 5em;
+    width: 100%;
+    display: flex;
+    background: white;
+}
+
+#foot {
+    width: 100%;
+    margin-bottom: -1%; 
+}
+#copyright {
+    font-style: italic;
+    margin: auto;
+}
+

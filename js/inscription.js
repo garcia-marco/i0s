@@ -71,16 +71,6 @@ function animMenu() {
 // Fin Menu Hamburger
 
 
-//Scroll
-
-document.getElementById("picto").onclick = function () {
-    var scroll = document.getElementById("body");
-    scroll.scrollIntoView({ block: "end", behavior: "smooth" });
-
-
-};
-
-
 // Questionnaire
 
 

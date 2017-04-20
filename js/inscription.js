@@ -1,16 +1,30 @@
+
+
+
 // Loading Page
 
 let loading = document.getElementById("blank");
 
 window.onload = function loaded() {
     loading.style.opacity = 0;
-    window.setTimeout(deleteLoad, 2000);
+    window.setTimeout(deleteLoad, 4000);
 };
 
 
 function deleteLoad() {
     document.body.removeChild(loading)
 }
+
+
+// Fixed Header
+
+var header = document.getElementById("header");
+
+function scrolled(){
+	header.className = (window.pageYOffset >= document.documentElement.clientHeight - header.offsetHeight) ? "fixed" : "nofixed";
+}
+
+addEventListener("scroll", scrolled, false);
 
 
 // Menu Hamburger
@@ -26,6 +40,7 @@ var menu = document.getElementById("icon");
 var slash = document.getElementsByClassName("slash");
 var sombre = document.getElementById("sombre");
 var classSombre = document.getElementsByClassName("sombre");
+var logoNav = document.getElementById("logoNav");
 nav.style.right = "100%";
 
 
@@ -53,7 +68,10 @@ function animMenu() {
         slash[0].style.transform = "rotate(220deg)";
         slash[2].style.transform = "rotate(-220deg)";
 
+        logoNav.style.opacity = 1;
+        logoNav.style.paddingBottom = "0";
     }
+
     else {
 
         nav.style.right = "100%";
@@ -64,6 +82,9 @@ function animMenu() {
 
         slash[0].style.transform = "rotate(0deg)";
         slash[2].style.transform = "rotate(0deg)";
+
+        logoNav.style.opacity = 0;
+        logoNav.style.paddingBottom = "30%";
     }
 
     sombre.classList.toggle("sombre");

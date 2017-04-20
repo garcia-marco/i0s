@@ -11,6 +11,57 @@ html, body {
 }
 
 
+/* Loading Page */
+
+
+
+
+#blank {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background: white;
+    display: flex;
+    opacity: 1;
+    transition: all 1s;
+}
+
+#loading {
+    margin: auto;
+    border: 4px dotted #fd9d45;
+    border-radius: 100%;
+    width: 5em;
+    height: 5em;
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/* Header */
+
+
+
+
+#logo {
+    background-size: contain; 
+    background-image: url("../img/logowcs.png"); 
+    position:fixed;
+    cursor: pointer;
+    top: 3%;
+    right: 3%;   
+    width: 5em;
+    height: 4.985351319em;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+
+
 
 /* Menu Hamburger */
 
@@ -23,20 +74,6 @@ html, body {
     left: 3%;
     z-index: 5;
     transition: all 2s;
-}
-
-
-#logo {
-    background-size: contain; 
-    background-image: url("../img/logowcs.png"); 
-    position:fixed;
-    cursor: pointer;
-    top: 3%;
-    right: 3%;   
-    width: 5em;
-    height: 4.985351319em;
-    z-index: 5;
-    transition: all 0.5s;
 }
 
 #nav {
@@ -162,6 +199,7 @@ ul > a:focus:before {
 
 #titre {
     margin: auto;
+    letter-spacing: 0.3vw;
     color: white;
     font-size: 3.5vw;
     text-align: center;

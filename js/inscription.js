@@ -1,5 +1,16 @@
+// Loading Page
+
+let loading = document.getElementById("blank");
+
+window.onload = function loaded() {
+    loading.style.opacity = 0;
+    window.setTimeout(deleteLoad, 2000);
+};
 
 
+function deleteLoad() {
+    document.body.removeChild(loading)
+}
 
 
 // Menu Hamburger
@@ -18,7 +29,7 @@ var classSombre = document.getElementsByClassName("sombre");
 nav.style.right = "100%";
 
 
-document.getElementById("icon").onclick = function () {
+menu.onclick = function () {
     animMenu();
 };
 
@@ -33,6 +44,7 @@ function animMenu() {
     if (nav.style.right == "100%") {
 
         nav.style.right = "70%";
+
         slash[1].style.opacity = 0;
 
         slash[0].style.top = "12px";
@@ -185,8 +197,7 @@ var progressBar = document.getElementById("myBar");
  * 2-Avancer la barre de progression 
  */
 
-document.getElementById("form").onchange = function ()
-{
+document.getElementById("form").onchange = function () {
     var radioChecked = checking();// on stock le resultat de la fonction pour eviter de l'appeler plusieurs fois
 
 
@@ -196,7 +207,7 @@ document.getElementById("form").onchange = function ()
     {
 
         document.getElementById("submit").innerHTML = "Valider";
-      //  progressBar.style.opacity =0; // quand la barre atteint 100%, on la cache puisque elle sert plus à rien
+        //  progressBar.style.opacity =0; // quand la barre atteint 100%, on la cache puisque elle sert plus à rien
     }
 
     // pour faire bouger la progressBar il suffit simplement de changer sa width ( largeur)

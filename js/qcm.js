@@ -141,7 +141,6 @@ document.getElementById("form").onchange = function ()
 {
     var radioChecked = checking();// on stock le resultat de la fonction pour eviter de l'appeler plusieurs fois
 
-
     //si tout les champs sont remplis on active le boutton valider , 
     //
     if (radioChecked == nbQuestions) //on comparre au nombre de questions checker (-via fonction cheking()-) à nbQuestions qui est une variable globale precedement defenie

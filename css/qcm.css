@@ -29,7 +29,7 @@ html, body {
     text-align: center;
     line-height: 20px;  
     color: white; 
-    transition: width 1s, opacity 2s;
+    transition: width 1s, opacity 2s; 
    
 }
 /************************/

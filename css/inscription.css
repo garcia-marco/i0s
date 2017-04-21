@@ -407,7 +407,7 @@ margin-right: 5%;
     background: #3cb878;
     transition: all 200ms;
     color: white;
-    font-size: 1.5vw;
+    font-size: 1vw;
     border-radius: 5px; 
 
  }
@@ -427,7 +427,7 @@ margin-right: 5%;
     transition: opacity 1s;
     transition: padding 1s;
     border-style: dashed;
-    color : #fd4932;
+    color : #FF1E26;
     background: rgba(253, 73, 50, 0.25);
     border-color:  rgba(253, 73, 50, 0.5);
 
@@ -483,3 +483,180 @@ margin-right: 5%;
     margin: auto;
 }
 
+/* Formulaire */
+
+ 
+#inscription {
+  margin: auto;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  background-color: beige;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+div#lab{
+ display: inline-block;
+  margin: auto;
+}
+
+/*boutton inscription */
+#btninscription {
+    border: 0px;
+    margin: auto;
+    width: auto;;
+    height: auto;
+    padding:  10px 20px ;
+    background: #3cb878;
+    transition: all 200ms;
+    color: white;
+    font-size: 2vw;
+    border-radius: 5px; 
+
+ }
+
+ #btninscription:hover {
+    background: #36a86e;
+    cursor: pointer;
+ }
+
+ #btninscription:focus {
+    outline: 0px;
+ }
+
+.oblig:invalid {
+  background-color: #ffdddd;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+
+input#iNnom , input#iPren {
+  text-transform: uppercase;
+}
+#inscription > input {
+    margin: auto;
+}
+div#openModal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#inscription > input:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 2px solid rgba(81, 203, 238, 1);
+  background-color:whitesmoke ;
+}
+#inscription > input, textarea {
+background-color:whitesmoke ;
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+
+
+
+
+
+/*    Pour la fenetre modale    */
+/********************************/
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+    border: 0px;
+    margin-top: 20px; 
+    padding: 10px ;
+    background: #FF1E26;
+    text-decoration: none;
+    transition: all 200ms;
+    color: white;
+    font-size: 1vw;
+    border-radius: 5px; 
+
+ }
+
+ .close:hover {
+    background: #C9181E;
+    cursor: pointer;
+ }
+
+ .close:focus {
+    outline: 0px;
+ }
+
+ #btInscrip {
+    margin-right: 10px;
+    border: 0px;
+    margin-top: 20px; 
+    padding: 10px ;
+    background: #3cb878;
+    transition: all 200ms;
+    color: white;
+    font-size: 1vw;
+    border-radius: 5px; 
+
+ }
+
+ #btInscrip:hover {
+    background: #36a86e;
+    cursor: pointer;
+ }
+
+ #btInscrip:focus {
+    outline: 0px;
+ }

@@ -19,9 +19,26 @@ function deleteLoad() {
 // Fixed Header
 
 var header = document.getElementById("header");
+var logo = document.getElementById("logo");
 
 function scrolled(){
-	header.className = (window.pageYOffset >= document.documentElement.clientHeight - header.offsetHeight) ? "fixed" : "nofixed";
+	if (document.body.scrollTop > 560 || document.documentElement.scrollTop > 560) {
+        header.className = "fixed"
+        logo.className = "fixed"
+
+        slash[0].style.backgroundColor = "#fd9d45";
+        slash[1].style.backgroundColor = "#FF553B";
+        slash[2].style.backgroundColor = "#FF1E26";
+
+    }
+    else {
+        header.className = "";
+        logo.className = "";
+
+        slash[0].style.backgroundColor = "white";
+        slash[1].style.backgroundColor = "white";
+        slash[2].style.backgroundColor = "white";
+    }    
 }
 
 addEventListener("scroll", scrolled, false);

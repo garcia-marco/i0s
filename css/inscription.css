@@ -60,6 +60,10 @@ html, body {
         border-radius: 20px !important;
     }
 
+    #copyright {
+        font-size: 2vw !important;
+    }
+
 }
 
 

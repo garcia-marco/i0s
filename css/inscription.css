@@ -42,11 +42,22 @@ html, body {
     }
 
     #btnCont {
-        bottom: 16% !important;
+        bottom: 14% !important;
     }
 
     #submit {
         font-size: 3vw !important;
+    }
+
+    #myBar {
+        font-size: 3vw !important;
+        height: auto !important;
+    }
+
+    #btninscription {
+        font-size: 4vw !important;
+        padding: 20px 30px !important;
+        border-radius: 20px !important;
     }
 
 }

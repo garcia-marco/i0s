@@ -19,9 +19,11 @@ function deleteLoad() {
 
 const header = document.getElementById("header");
 const logo = document.getElementById("logo");
+var container = document.getElementsByClassName("container");
 
 function scrolled(){
-	if (document.body.scrollTop > 560 || document.documentElement.scrollTop > 560) {
+    console.log(container[0].offsetTop)
+	if (document.body.scrollTop > container[0].offsetTop || document.documentElement.scrollTop > container[0].offsetTop) {
         header.className = "fixed";
         logo.className = "fixed";
 

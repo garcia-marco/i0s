@@ -45,6 +45,10 @@ html, body {
         bottom: 16% !important;
     }
 
+    #submit {
+        font-size: 3vw !important;
+    }
+
 }
 
 
@@ -431,7 +435,7 @@ margin-right: 5%;
 }
 
 .question {
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 2vw;
 }
 

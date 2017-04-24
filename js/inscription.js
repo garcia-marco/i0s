@@ -3,28 +3,27 @@
 
 // Loading Page
 
-let loading = document.getElementById("blank");
+const loading = document.getElementById("blank");
 
 window.onload = function loaded() {
-    loading.style.opacity = 0;
-    window.setTimeout(deleteLoad, 4000);
+    loading.classList.add("fadeOut");
+    window.setTimeout(deleteLoad, 1000);
 };
 
-
 function deleteLoad() {
-    document.body.removeChild(loading)
+    document.body.removeChild(loading);
 }
 
 
 // Fixed Header
 
-var header = document.getElementById("header");
-var logo = document.getElementById("logo");
+const header = document.getElementById("header");
+const logo = document.getElementById("logo");
 
 function scrolled(){
 	if (document.body.scrollTop > 560 || document.documentElement.scrollTop > 560) {
-        header.className = "fixed"
-        logo.className = "fixed"
+        header.className = "fixed";
+        logo.className = "fixed";
 
         slash[0].style.backgroundColor = "#fd9d45";
         slash[1].style.backgroundColor = "#FF553B";
@@ -53,12 +52,11 @@ addEventListener("scroll", scrolled, false);
 
 
 
-var menu = document.getElementById("icon");
-var slash = document.getElementsByClassName("slash");
-var sombre = document.getElementById("sombre");
-var classSombre = document.getElementsByClassName("sombre");
-var logoNav = document.getElementById("logoNav");
-
+const menu = document.getElementById("icon");
+const slash = document.getElementsByClassName("slash");
+const sombre = document.getElementById("sombre");
+const classSombre = document.getElementsByClassName("sombre");
+const logoNav = document.getElementById("logoNav");
 nav.style.right = "100%";
 
 menu.onclick = function () {
@@ -74,8 +72,12 @@ sombre.onclick = function () {
 function animMenu() {
 
     if (nav.style.right == "100%") {
-        
-        nav.style.right = "70%";
+        if (document.documentElement.clientWidth > 1024) {
+            nav.style.right = "70%";
+
+        } else {
+            nav.style.right = "0%";
+        }
 
         slash[1].style.opacity = 0;
 
@@ -128,7 +130,7 @@ function animMenu() {
 
 
 // Nombre de Questions
-var nbQuestions = 10;
+const nbQuestions = 10;
 
 // Variable pour la note finale
 var grade = 0;
@@ -278,10 +280,10 @@ document.getElementById("form").onchange = function () {
 {
     ///// declaration de variables///
 
-    var myForm = document.getElementById('inscription');
-    var inputsOblig = document.getElementsByClassName('oblig'); //les inputs obligatoire 
-    var newLine = escape("\n");                                 // un retour a la ligne
-    var btInscrip = document.getElementById("btInscrip");
+    const myForm = document.getElementById('inscription');
+    const inputsOblig = document.getElementsByClassName('oblig'); //les inputs obligatoire 
+    const newLine = escape("\n");                                 // un retour a la ligne
+    const btInscrip = document.getElementById("btInscrip");
     var mail = '' // adresse mail
     var subject = ''
     var my_body = ''

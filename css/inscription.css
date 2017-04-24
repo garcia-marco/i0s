@@ -11,6 +11,44 @@ html, body {
 }
 
 
+@media only screen and (max-device-width: 610px) {
+
+    #cover {
+        height: 20% !important;
+    }
+
+}
+
+@media only screen and (min-device-width: 610px) and (max-device-width: 1024px) {
+
+    #cover {
+        height: 35% !important;
+    }
+
+}
+
+@media only screen and (max-device-width: 1024px) {
+
+    #nav {
+        width: 100% !important;
+    }
+
+    #formulaire {
+        width: 85% !important;
+    }
+
+    #form {
+        height: 65em !important;
+    }
+
+    #btnCont {
+        bottom: 16% !important;
+    }
+
+}
+
+
+
 /* Loading Page */
 
 
@@ -25,6 +63,10 @@ html, body {
     display: flex;
     opacity: 1;
     transition: all 1s;
+}
+
+.fadeOut {
+    opacity: 0 !important;
 }
 
 #loading {
@@ -283,7 +325,7 @@ margin-right: 5%;
 }
 
 #fondgraph {
-    top:-12%;
+    top:-10%;
     left:-20%;
     opacity: 0.4;
     position: fixed;
@@ -427,7 +469,7 @@ margin-right: 5%;
     transition: opacity 1s;
     transition: padding 1s;
     border-style: dashed;
-    color : #FF1E26;
+    color : rgb(253, 73, 50);;
     background: rgba(253, 73, 50, 0.25);
     border-color:  rgba(253, 73, 50, 0.5);
 
@@ -485,6 +527,10 @@ margin-right: 5%;
 
 /* Formulaire */
 
+#btnCont {
+    position: absolute;
+    bottom: 28%;
+};
  
 #inscription {
   margin: auto;

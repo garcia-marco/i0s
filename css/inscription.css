@@ -17,6 +17,26 @@ html, body {
 
 @media screen and (max-device-width: 1024px) {
 
+    .question {
+        font-weight: bolder;
+        font-size: 1.5vw !important;
+    }
+
+    label {
+        font-size: 13px !important;
+    }
+
+    .ques {
+        margin-top: 10px !important;
+        height: 22px !important;
+        width: 22px !important;
+    }
+
+    #titre {
+        letter-spacing: 0.4vw !important;
+        font-size: 5vw !important;
+    }
+
     #nav {
         width: 100% !important;
     }
@@ -52,6 +72,9 @@ html, body {
         font-size: 2vw !important;
     }
 
+    .graph {
+        height: 35vh !important;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -90,14 +113,18 @@ html, body {
     .question {
         font-size: 3vw !important;
     }
-
+    
     #copyright {
         font-size: 2vw !important;
     }
 
     #logoNav {
-    width: 8em !important;
-    margin: auto !important;
+    width: 6em !important;
+    margin:  20px auto auto auto !important;
+    }
+    
+    #logoNavContain {
+        height: 25% !important;
     }
 
     .navMenu {
@@ -128,6 +155,10 @@ html, body {
     margin-left: 15% !important;
     margin-top: 12% !important;
     }
+        
+    .graph {
+        height: 35vh !important;
+    }
 
 }
 
@@ -135,6 +166,11 @@ html, body {
 
     #cover {
         height: 35% !important;
+    }
+
+    #logoNav {
+        width: 8em !important;
+        margin: auto !important;
     }
 
 }
@@ -269,6 +305,10 @@ html, body {
     transition: all 1.5s;
 }
 
+#logoNavContain {
+    position: absolute; 
+    height:35%;
+} 
 #icon {
     position:fixed;
     cursor: pointer;
@@ -470,7 +510,7 @@ margin-right: 5%;
 
 #titre {
     margin: auto;
-    letter-spacing: 0.3vw;
+    letter-spacing: 0.1vw;
     color: white;
     font-size: 3.5vw;
     text-align: center;
@@ -499,7 +539,7 @@ margin-right: 5%;
 .graph{
     background : url("../img/graph.png") no-repeat center;
     background-size: cover;
-    height: 25%;
+    height: 50vh;
 }
 
 .width {

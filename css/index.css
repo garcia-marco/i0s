@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Flamenco:300');
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto' , sans-serif;
+}
+
+
+
+
+
+
+@media screen and (max-device-width: 1024px) {
+
+    #nav {
+        width: 100% !important;
+    }
+
+    #copyright {
+        font-size: 2vw !important;
+    }
+
+    .graph {
+        height: 35vh !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    #cover {
+        height: 40% !important;
+    }
+
+    #nav {
+        width: 100% !important;
+    }
+
+    #copyright {
+        font-size: 2vw !important;
+    }
+
+    #logoNav {
+    width: 6em !important;
+    margin:  20px auto auto auto !important;
+    }
+    
+    #logoNavContain {
+        height: 25% !important;
+    }
+
+    .navMenu {
+    text-align: center !important;
+    padding: 10% !important;
+    font-size: 3vw !important;
+    }
+
+    .social {
+    width: 4em !important;
+    height: 4em !important;
+    transition: all 0.5s !important;
+    margin: auto !important;
+    border-radius: 70px !important; 
+    }
+
+    .tel:hover {
+    width: 13em !important;
+
+    }
+
+    .tel:hover #num {
+    font-size: 20px !important;
+    }
+
+    ul > a:before {
+    width: 20% !important;
+    margin-left: 15% !important;
+    margin-top: 12% !important;
+    }
+        
+    .graph {
+        height: 35vh !important;
+    }
+
+}
+
+@media screen and (min-device-width: 610px) and (max-device-width: 1024px) {
+
+    #cover {
+        height: 35% !important;
+    }
+
+    #logoNav {
+        width: 8em !important;
+        margin: auto !important;
+    }
+
+}
+
+@media screen and (max-device-width: 610px) {
+
+    #cover {
+        height: 20% !important;
+    }
+
+    #logoNav {
+    width: 18em !important;
+    margin: auto !important;
+    }
+
+    .navMenu {
+    text-align: center !important;
+    padding: 10% !important;
+    font-size: 6vw !important;
+    }
+
+    .social {
+    width: 8em !important;
+    height: 8em !important;
+    transition: all 0.5s !important;
+    margin: auto !important;
+    border-radius: 70px !important; 
+    }
+
+    .tel:hover {
+    width: 20em !important;
+
+    }
+
+    .tel:hover #num {
+    font-size: 28px !important;
+    }
+
+
+}
+
+
+/* Loading Page */
+
+
+
+
+#blank {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background: white;
+    display: flex;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.fadeOut {
+    opacity: 0 !important;
+}
+
+#loading {
+    margin: auto;
+    border: 4px dotted #fd9d45;
+    border-radius: 100%;
+    width: 5em;
+    height: 5em;
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+
+
+/* Header */
+
+
+
+
+#logo {
+    background-size: contain; 
+    background-image: url("../img/logowcs.png"); 
+    position:fixed;
+    top: 1em;
+    right: 2em;   
+    width: 4em;
+    height: 4em;
+    z-index: 3;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#logo.fixed {
+    background-image: url("../img/logowcsfixed.png"); 
+}
+
+
+#header {
+    width: 100%;
+    height: 0;
+    position:fixed;
+    background: white;
+    box-shadow: 0 0 10px black;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+#header.fixed {
+    transition: all 0.5s;
+    height: 6em;
+}
+
+
+
+
+/* Menu Hamburger */
+
+
+
+#logoNav {
+    width: 8em;
+    margin: auto;
+    padding-bottom: 30%;
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+#logoNavContain {
+    position: absolute; 
+    height:35%;
+} 
+#icon {
+    position:fixed;
+    cursor: pointer;
+    top: 2em;
+    left: 2em;
+    z-index: 5;
+    transition: all 2s;
+}
+
+#nav {
+    z-index: 4;
+    right:100%;
+    position:fixed;
+    width: 30%;
+    height: 100%;
+    background: white ;
+    box-shadow: 0 0 10px black;
+    transition : all 0.6s;
+    display: flex;
+}
+
+ul {
+    padding: 0;
+    margin: auto;
+    list-style: none;
+    width: 50%;
+}
+
+ul > a {
+    text-decoration: none;
+    color:black;
+}
+
+ul > a:before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    margin-left: 10%;
+    margin-top: 14%;
+    background: black;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.4s ;
+}
+
+ul > a:hover:before,
+ul > a:focus:before {
+  transform: scaleX(1);
+}
+
+.menuTop {
+    margin-bottom: 20px;
+}
+
+.navMenu {
+    text-align: center;
+    padding: 10%;
+    font-size: 1.5vw;
+}
+
+.slash {
+    opacity : 1;
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    top : 0px;
+    margin-top:7px;
+    border-radius: 50px;
+    position: relative;
+    transition : all 0.5s;
+}
+
+.slash:first-child {
+    margin-top:0px;
+}
+
+.colorSlash {
+    background-color: black !important;
+}
+
+.sombre {
+    z-index: 3;
+    position: fixed;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#social {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    justify-content: center;
+}
+
+.social {
+    width: 4em;
+    height: 4em;
+    transition: all 0.5s;
+    margin: auto;
+    border-radius: 35px; 
+}
+
+.tel, .twitter, .facebook {
+    background-color: #555555;
+    transition: all 0.5s;
+}
+
+.tel {
+    background-image: url("../img/social-02.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.facebook {
+    background-image: url("../img/social-03.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 1s;  
+    
+}
+
+.twitter {
+    background-image: url("../img/social-01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 1s;  
+}
+
+.tel:hover {
+    background-color: #222222;
+    width: 12em;
+
+}
+
+.twitter:hover {
+    background-color: rgb(25, 138, 208);
+    box-shadow: 0 0 5px black;
+}
+
+.facebook:hover {
+    background-color: rgb(59, 89, 152);
+    box-shadow: 0 0 5px black;
+}
+
+#num {
+    margin: auto;
+    margin-right: 10%;
+    color: white;
+    opacity: 0;
+    font-size: 0;
+    transition: all 0.5s;
+}
+
+.tel:hover #num {
+    font-size: 17px;
+    opacity: 1;
+}
+
+#social > .right {
+margin-left: 5%;
+}
+
+#social > .left {
+margin-right: 5%;
+}
+
+
+
+
+/* Body */
+
+
+
+#body {
+    background: linear-gradient( white,#fd9d45, #FF1E26);
+
+    box-shadow: 0 0 20px black;
+    height: auto;
+}
+
+.white {
+    background: white;
+    padding-bottom: 3%;
+
+}
+
+.graph{
+    background : url("../img/graph.png") no-repeat center;
+    background-size: cover;
+    height: 50vh;
+}
+
+.width {
+    width: 100%;
+    display:flex;
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+
+/* Footer */
+
+
+#footer {
+    height: 5em;
+    width: 100%;
+    background: white;
+}
+
+#foot {
+    width: 100%;
+    margin-bottom: -1%; 
+}
+#copyright {
+    font-style: italic;
+    text-align: center;
+    margin: auto;
+}
+
+
+ /* Video homepage */
+
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    left:0;
+    position: fixed;
+}
+
+.video-container video {
+    position: fixed;
+    z-index: 0;
+    left:0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+
+/* Cover */
+
+
+
+.fond {
+    position: fixed;
+    width: 100%;
+}
+
+#cover {
+    display: flex;
+    height: 100%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    justify-content: center;
+}
+
+#titre {
+    margin: 0.5% auto auto auto;
+    letter-spacing: 0.3vw;
+    color: white;
+    font-size: 3.5vw;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+}
+
+#logotitre {
+    width: 7em;
+    margin: auto auto 0.5% auto;
+}
+
+#fleche {
+    font-family: 'Flamenco', cursive;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+        -webkit-animation: fleche 1s both infinite;
+    -moz-animation: fleche 1s both infinite;
+    animation: fleche 1s both infinite;
+}
+
+@-moz-keyframes fleche { 0% { -moz-transform: translateY(0); } 50% { -moz-transform: translateY(-10px); }  100% { -moz-transform: translateY(0); } }
+@-webkit-keyframes fleche { 0% { -webkit-transform: translateY(0); }50% { -webkit-transform: translateY(-10px); }100% { -webkit-transform: translateY(0); } }
+@keyframes fleche { 100% { -webkit-transform: translateY(0); transform:translateY(0); }50% { -webkit-transform: translateY(-10px); transform:translateY(-10px); }100% { -webkit-transform: translateY(0); transform:translateY(0); } }

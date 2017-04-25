@@ -11,23 +11,11 @@ html, body {
 }
 
 
-@media only screen and (max-device-width: 610px) {
 
-    #cover {
-        height: 20% !important;
-    }
 
-}
 
-@media only screen and (min-device-width: 610px) and (max-device-width: 1024px) {
 
-    #cover {
-        height: 35% !important;
-    }
-
-}
-
-@media only screen and (max-device-width: 1024px) {
+@media screen and (max-device-width: 1024px) {
 
     #nav {
         width: 100% !important;
@@ -66,6 +54,127 @@ html, body {
 
 }
 
+@media screen and (max-width: 1024px) {
+
+    #cover {
+        height: 40% !important;
+    }
+
+    #nav {
+        width: 100% !important;
+    }
+
+    #formulaire {
+        width: 85% !important;
+    }
+
+    #btnCont {
+        bottom: 12% !important;
+    }
+
+    #submit {
+        font-size: 3vw !important;
+    }
+
+    #myBar {
+        font-size: 3vw !important;
+        height: auto !important;
+    }
+
+    #btninscription {
+        font-size: 3vw !important;
+        padding: 10px 20px !important;
+        border-radius: 10px !important;
+    }
+
+    .question {
+        font-size: 3vw !important;
+    }
+
+    #copyright {
+        font-size: 2vw !important;
+    }
+
+    #logoNav {
+    width: 8em !important;
+    margin: auto !important;
+    }
+
+    .navMenu {
+    text-align: center !important;
+    padding: 10% !important;
+    font-size: 3vw !important;
+    }
+
+    .social {
+    width: 4em !important;
+    height: 4em !important;
+    transition: all 0.5s !important;
+    margin: auto !important;
+    border-radius: 70px !important; 
+    }
+
+    .tel:hover {
+    width: 13em !important;
+
+    }
+
+    .tel:hover #num {
+    font-size: 20px !important;
+    }
+
+    ul > a:before {
+    width: 20% !important;
+    margin-left: 15% !important;
+    margin-top: 12% !important;
+    }
+
+}
+
+@media screen and (min-device-width: 610px) and (max-device-width: 1024px) {
+
+    #cover {
+        height: 35% !important;
+    }
+
+}
+
+@media screen and (max-device-width: 610px) {
+
+    #cover {
+        height: 20% !important;
+    }
+
+    #logoNav {
+    width: 18em !important;
+    margin: auto !important;
+    }
+
+    .navMenu {
+    text-align: center !important;
+    padding: 10% !important;
+    font-size: 6vw !important;
+    }
+
+    .social {
+    width: 8em !important;
+    height: 8em !important;
+    transition: all 0.5s !important;
+    margin: auto !important;
+    border-radius: 70px !important; 
+    }
+
+    .tel:hover {
+    width: 20em !important;
+
+    }
+
+    .tel:hover #num {
+    font-size: 28px !important;
+    }
+
+
+}
 
 
 /* Loading Page */
@@ -388,8 +497,9 @@ margin-right: 5%;
 }
 
 .graph{
-    width: 100%;
-    margin-bottom: -8%;
+    background : url("../img/graph.png") no-repeat center;
+    background-size: cover;
+    height: 25%;
 }
 
 .width {
@@ -530,7 +640,6 @@ margin-right: 5%;
 #footer {
     height: 5em;
     width: 100%;
-    display: flex;
     background: white;
 }
 
@@ -544,12 +653,10 @@ margin-right: 5%;
     margin: auto;
 }
 
+
 /* Formulaire */
 
-#btnCont {
-    position: absolute;
-    bottom: 28%;
-};
+
  
 #inscription {
   margin: auto;
@@ -587,8 +694,6 @@ div#lab{
 #btninscription {
     border: 0px;
     margin: auto;
-    width: auto;;
-    height: auto;
     padding:  10px 20px ;
     background: #3cb878;
     transition: all 200ms;

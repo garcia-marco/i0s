@@ -521,7 +521,9 @@ margin-right: 5%;
 
 /* Body */
 
-
+.orange {
+    color: #fd9d45;
+}
 
 #body {
     background: linear-gradient( white,#fd9d45, #FF1E26);

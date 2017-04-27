@@ -33,8 +33,13 @@ html, body {
 
 @media screen and (max-width: 1024px) {
 
+
+    #submit {
+        font-size: 1.5em !important;
+    }
+
     #cover {
-        height: 40% !important;
+        height: 50% !important;
     }
 
     #nav {
@@ -91,8 +96,12 @@ html, body {
 
 @media screen and (min-device-width: 610px) and (max-device-width: 1024px) {
 
+    #submit {
+        font-size: 2em !important;
+    }
+
     #cover {
-        height: 35% !important;
+        height: 40% !important;
     }
 
     #logoNav {
@@ -100,12 +109,20 @@ html, body {
         margin: auto !important;
     }
 
+    .hei {
+        height: 200px !important;
+    }
+
 }
 
 @media screen and (max-device-width: 610px) {
 
+    #submit {
+        font-size: 2em !important;
+    }
+
     #cover {
-        height: 20% !important;
+        height: 35% !important;
     }
 
     #logoNav {
@@ -150,7 +167,7 @@ html, body {
     height: 100%;
     position: fixed;
     z-index: 10;
-    background: white;
+    background-color: white;
     display: flex;
     opacity: 1;
     transition: all 1s;
@@ -416,8 +433,7 @@ margin-right: 5%;
 
 
 #body {
-    background: linear-gradient( white,#fd9d45, #FF1E26);
-
+    background: white;
     box-shadow: 0 0 20px black;
     height: auto;
 }
@@ -434,9 +450,63 @@ margin-right: 5%;
     height: 50vh;
 }
 
+.titre {
+    margin:  20px auto auto auto;
+    color : black;
+    font-size: 1.9em;
+}
+.txt {
+    color: black;
+    margin: auto;
+}
+.orange {
+    color: #EF7C4F;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+.red {
+    color: #FF1E26;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+#swift {
+    width: 7em;
+    margin: auto 1% 1% auto;
+    transition: all 0.3s;
+
+}
+
+#apple {
+    width: 5.5em;
+    margin: auto auto 1% 1%;
+    transition: all 0.3s;
+}
+
+#swift:hover {
+    width: 8em;
+}
+
+#apple:hover {
+    width: 6.5em;
+}
+
 .width {
     width: 100%;
     display:flex;
+}
+
+.width8 {
+    margin: auto;
+    width: 70%;
+    display:flex;
+    flex-direction: column; 
+}
+
+.hei {
+   justify-content: center;
+   height: 300px;
 }
 
 .container {
@@ -451,7 +521,8 @@ margin-right: 5%;
 #footer {
     height: 5em;
     width: 100%;
-    background: white;
+    background: #e52e32;
+    color: white;
 }
 
 #foot {
@@ -465,41 +536,30 @@ margin-right: 5%;
 }
 
 
- /* Video homepage */
+#submit {
+    border: 0px;
+    margin: auto;
+    width: auto;;
+    height: auto;
+    margin-top: 20px; 
+    padding: 10px ;
+    background: #3cb878;
+    transition: all 0.2s;
+    color: white;
+    font-size: 1vw;
+    border-radius: 5px; 
 
-.no-video .video-container video,
-.touch .video-container video {
-    display: none;
-}
-.no-video .video-container .poster,
-.touch .video-container .poster {
-    display: block !important;
-}
-.video-container {
-    position: relative;
-    bottom: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background: #000;
-}
-.video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    left:0;
-    position: fixed;
-}
+ }
 
-.video-container video {
-    position: fixed;
-    z-index: 0;
-    left:0;
-    bottom: 0;
-}
-.video-container video.fillWidth {
-    width: 100%;
-}
+ #submit:hover {
+    background: #36a86e;
+    cursor: pointer;
+ }
+
+ #submit:focus {
+    outline: 0px;
+ }
+
 
 
 /* Cover */
@@ -508,20 +568,20 @@ margin-right: 5%;
 
 .fond {
     position: fixed;
-    width: 100%;
+    width: 140%;
 }
 
 #cover {
     display: flex;
     height: 100%;
     position: relative;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     flex-direction: column;
     justify-content: center;
 }
 
 #titre {
-    margin: 0.5% auto auto auto;
+    margin: auto;
     letter-spacing: 0.3vw;
     color: white;
     font-size: 3.5vw;
@@ -529,17 +589,16 @@ margin-right: 5%;
     text-shadow: 0 0 10px black;
 }
 
-#logotitre {
-    width: 7em;
-    margin: auto auto 0.5% auto;
-}
-
 #fleche {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
     font-family: 'Flamenco', cursive;
     font-size: 3em;
-    text-align: center;
     color: white;
-        -webkit-animation: fleche 1s both infinite;
+    cursor: pointer;
+    -webkit-animation: fleche 1s both infinite;
     -moz-animation: fleche 1s both infinite;
     animation: fleche 1s both infinite;
 }

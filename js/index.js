@@ -2,9 +2,10 @@
 
 const loading = document.getElementById("blank");
 
+
 window.onload = function loaded() {
     loading.classList.add("fadeOut");
-    window.setTimeout(deleteLoad, 1000);
+    window.setTimeout(deleteLoad, 1000)
 };
 
 function deleteLoad() {
@@ -16,11 +17,10 @@ function deleteLoad() {
 
 const header = document.getElementById("header");
 const logo = document.getElementById("logo");
-var container = document.getElementsByClassName("container");
+var fleche = document.getElementById("fleche");
 
 function scrolled(){
-    console.log(container[0].offsetTop)
-	if (document.body.scrollTop > container[0].offsetTop || document.documentElement.scrollTop > container[0].offsetTop) {
+	if (document.body.scrollTop > fleche.offsetTop || document.documentElement.scrollTop > fleche.offsetTop) {
         header.className = "fixed";
         logo.className = "fixed";
 
@@ -107,7 +107,7 @@ function animMenu() {
 
     sombre.classList.toggle("sombre");
 
-    for (let i = 0; i < slash.length; i++) {
+    for (var i = 0; i < slash.length; i++) {
         slash[i].classList.toggle("colorSlash");
     }
 };
@@ -120,3 +120,13 @@ function animMenu() {
 
 
 // Fin Menu Hamburger
+
+
+$(document).ready(function() {
+		$(fleche).on('click', function() { // Au clic sur un élément
+			var page = $(this).attr('href'); // Page cible
+			var speed = 750; // Durée de l'animation (en ms)
+			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+			return false;
+		});
+	});

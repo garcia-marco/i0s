@@ -53,7 +53,10 @@ html, body {
     #cover {
         height: 35% !important;
     }
-
+    
+    #foot {
+        margin-bottom: -2% !important; 
+    }
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -62,6 +65,9 @@ html, body {
         width: 100% !important;
     }
 
+    #foot {
+        margin-bottom: -2% !important; 
+    }
     #formulaire {
         width: 85% !important;
     }
@@ -395,8 +401,10 @@ margin-right: 5%;
 
 #fond {
     position: fixed;
-    top:-40%;
-    width: 120%;
+    top: -40%;
+    align-items: center;
+    height: 200%;
+    width: auto;
 }
 
 #fondgraph {

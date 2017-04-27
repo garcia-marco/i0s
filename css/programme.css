@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto' , sans-serif;
+}
+
+
+@media only screen and (max-device-width: 610px) {
+
+    #cover {
+        height: 20% !important;
+    }
+
+    #logoNav {
+    width: 18em !important;
+    margin: auto !important;
+}
+
+    .navMenu {
+    text-align: center !important;
+    padding: 10% !important;
+    font-size: 6vw !important;
+}
+
+    .social {
+    width: 8em !important;
+    height: 8em !important;
+    transition: all 0.5s !important;
+    margin: auto !important;
+    border-radius: 70px !important; 
+}
+
+    .tel:hover {
+    width: 20em !important;
+
+}
+
+    .tel:hover #num {
+    font-size: 28px !important;
+}
+
+
+}
+
+@media only screen and (min-device-width: 610px) and (max-device-width: 1024px) {
+
+    #cover {
+        height: 35% !important;
+    }
+
+}
+
+@media only screen and (max-device-width: 1024px) {
+
+    #nav {
+        width: 100% !important;
+    }
+
+    #formulaire {
+        width: 85% !important;
+    }
+
+    #form {
+        height: 65em !important;
+    }
+
+    #btnCont {
+        bottom: 14% !important;
+    }
+
+    #submit {
+        font-size: 3vw !important;
+    }
+
+    #myBar {
+        font-size: 3vw !important;
+        height: auto !important;
+    }
+
+    #btninscription {
+        font-size: 4vw !important;
+        padding: 20px 30px !important;
+        border-radius: 20px !important;
+    }
+
+    #copyright {
+        font-size: 2vw !important;
+    }
+
+        label {
+    font-size: 13px !important;
+    }
+
+    .question {
+    font-weight: bolder;
+    font-size: 1.5vw !important;
+}
+
+    .ques {
+    margin-top: 10px !important;
+    height: 22px !important;
+    width: 22px !important;
+}
+
+#titre {
+    letter-spacing: 0.4vw !important;
+    font-size: 5vw !important;
+}
+
+
+}
+
+
+
+@media screen and (max-width:1024px) {
+
+}
+
+
+
+/* Loading Page */
+
+
+
+
+#blank {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background: white;
+    display: flex;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.fadeOut {
+    opacity: 0 !important;
+}
+
+#loading {
+    margin: auto;
+    border: 4px dotted #fd9d45;
+    border-radius: 100%;
+    width: 5em;
+    height: 5em;
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+
+
+/* Header */
+
+
+
+
+#logo {
+    background-size: contain; 
+    background-image: url("../img/logowcs.png"); 
+    position:fixed;
+    top: 1em;
+    right: 2em;   
+    width: 4em;
+    height: 4em;
+    z-index: 3;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#logo.fixed {
+    background-image: url("../img/logowcsfixed.png"); 
+}
+
+
+#header {
+    width: 100%;
+    height: 0;
+    position:fixed;
+    background: white;
+    box-shadow: 0 0 10px black;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+#header.fixed {
+    transition: all 0.5s;
+    height: 6em;
+}
+
+
+
+
+/* Menu Hamburger */
+
+
+
+#logoNav {
+    width: 8em;
+    margin: auto;
+    padding-bottom: 30%;
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+#icon {
+    position:fixed;
+    cursor: pointer;
+    top: 2em;
+    left: 2em;
+    z-index: 5;
+    transition: all 2s;
+}
+
+#nav {
+    z-index: 4;
+    right:100%;
+    position:fixed;
+    width: 30%;
+    height: 100%;
+    background: white ;
+    box-shadow: 0 0 10px black;
+    transition : all 0.6s;
+    display: flex;
+}
+
+ul {
+    padding: 0;
+    margin: auto;
+    list-style: none;
+    width: 50%;
+}
+
+ul > a {
+    text-decoration: none;
+    color:black;
+}
+
+ul > a:before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    margin-left: 10%;
+    margin-top: 14%;
+    background: black;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.4s ;
+}
+
+ul > a:hover:before,
+ul > a:focus:before {
+  transform: scaleX(1);
+}
+
+.menuTop {
+    margin-bottom: 20px;
+}
+
+.navMenu {
+    text-align: center;
+    padding: 10%;
+    font-size: 1.5vw;
+}
+
+.slash {
+    opacity : 1;
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    top : 0px;
+    margin-top:7px;
+    border-radius: 50px;
+    position: relative;
+    transition : all 0.5s;
+}
+
+.slash:first-child {
+    margin-top:0px;
+}
+
+.colorSlash {
+    background-color: black !important;
+}
+
+.sombre {
+    z-index: 3;
+    position: fixed;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#social {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    justify-content: center;
+}
+
+.social {
+    width: 4em;
+    height: 4em;
+    transition: all 0.5s;
+    margin: auto;
+    border-radius: 35px; 
+}
+
+.tel, .twitter, .facebook {
+    background-color: #555555;
+    transition: all 0.5s;
+}
+
+.tel {
+    background-image: url("../img/social-02.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.facebook {
+    background-image: url("../img/social-03.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 1s;  
+    
+}
+
+.twitter {
+    background-image: url("../img/social-01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 1s;  
+}
+
+.tel:hover {
+    background-color: #222222;
+    width: 12em;
+
+}
+
+.twitter:hover {
+    background-color: rgb(25, 138, 208);
+    box-shadow: 0 0 5px black;
+}
+
+.facebook:hover {
+    background-color: rgb(59, 89, 152);
+    box-shadow: 0 0 5px black;
+}
+
+#num {
+    margin: auto;
+    margin-right: 10%;
+    color: white;
+    opacity: 0;
+    font-size: 0;
+    transition: all 0.5s;
+}
+
+.tel:hover #num {
+    font-size: 17px;
+    opacity: 1;
+}
+
+#social > .right {
+margin-left: 5%;
+}
+
+#social > .left {
+margin-right: 5%;
+}
+
+
+/* Cover */
+
+
+
+#fond {
+    position: fixed;
+    top:-40%;
+    width: 120%;
+}
+
+#fondgraph {
+    top:-10%;
+    left:-20%;
+    opacity: 0.4;
+    position: fixed;
+    width: 180%;
+}
+
+
+#cover {
+    display: flex;
+    height: 86%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#titre {
+    margin: auto;
+    letter-spacing: 0.3vw;
+    color: white;
+    font-size: 3.5vw;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+}
+
+.coverheight {
+    height: 40% !important;
+}
+
+
+
+/* Body */
+
+
+
+#body {
+    background: white;
+    box-shadow: 0 0 20px black;
+    height: auto;
+    width: 100%;
+}
+
+.white {
+    background: white;
+    padding-bottom: 3%;
+
+}
+
+.graph{
+    width: 100%;
+    margin-bottom: -8%;
+}
+
+.width {
+    width: 100%;
+    display:flex;
+}
+
+.test {
+    width: 100%;
+    height: 300px;
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+#picto {
+    width: 10em;
+    height: 10em;
+    margin:-5em auto 0 auto;
+    transition: all 0.3s;
+
+}
+
+#picto:hover {
+    width: 11em;
+    margin:-5.5em auto 0 auto;
+    height: 11em;
+}
+
+/* Programme */
+
+.contenu {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin : auto;
+}
+
+
+.contenu_Pr {
+    width: 90%;
+    justify-content: center;
+    margin : auto;
+}
+
+.colonne {
+    width: 40%;
+    margin: 30px auto 30px;
+}
+
+.logoProgramme {
+    width: 70px;
+    margin: 0 auto;
+    height: 70px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+}
+
+.h {
+    height: 80px;
+}
+
+
+.logoProgramme:hover {
+    width: 80px;
+    height: 80px;
+}
+
+
+h2 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.7em;
+    color: #EF7C4F;
+}
+
+p {
+    text-align: center;
+    line-height: 16px;
+}
+
+.paragraphe1 > p {
+    text-align: center;
+    line-height: 18px;
+}
+
+.paragraphe {
+    transition: all 1s;
+    font-size: 0;
+    opacity: 0;
+}
+
+.display {
+    opacity: 1;
+    font-size: 1em;
+}
+
+
+
+/* Footer */
+
+
+#footer {
+    height: 5em;
+    width: 100%;
+    display: flex;
+    background: #e52e32;
+}
+
+#foot {
+    width: 100%;
+    margin-bottom: -1%; 
+}
+
+#copyright {
+    font-style: italic;
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+
+

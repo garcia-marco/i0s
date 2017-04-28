@@ -2,10 +2,7 @@
 
 
 // Loading Page
-
 const loading = document.getElementById("blank");
-
-window.setTimeout(deleteLoad, 10000);
 
 window.onload = function loaded() {
     loading.classList.add("fadeOut");

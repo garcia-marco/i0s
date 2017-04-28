@@ -5,8 +5,6 @@
 
 const loading = document.getElementById("blank");
 
-window.setTimeout(deleteLoad, 10000);
-
 window.onload = function loaded() {
     loading.classList.add("fadeOut");
     window.setTimeout(deleteLoad, 1000);
@@ -280,80 +278,92 @@ document.getElementById("form").onchange = function () {
 
 
 
-(function ()
-{
+(function () {
     ///// declaration de variables///
 
-    const myForm = document.getElementById('inscription');
-    const inputsOblig = document.getElementsByClassName('oblig'); //les inputs obligatoire 
-    const newLine = escape("\n");                                 // un retour a la ligne
-    const btInscrip = document.getElementById("btInscrip");
+    var myForm = document.getElementById('inscription');
+    var inputsOblig = document.getElementsByClassName('oblig'); //les inputs obligatoire 
+    var newLine = escape("\n"); // un retour a la ligne
+    var btInscrip = document.getElementById("btInscrip");
+    var glyphicon = document.getElementsByClassName("glyphicon")
+
+
+
+
+
     var mail = '' // adresse mail
     var subject = ''
     var my_body = ''
 
 
-    //////////////////////////////////////////////
+    /////////////////////////////////////////////
+  
+    function check(list) {
+        var is = true;
 
 
-    function check(list)
-    {
-        for (var i = 0; i < list.length; i++)
-        {
-            if (list[i].value == "")            
-            {
-                return false;
+        for (var i = 0; i < list.length; i++) {
+            list[i].style.borderColor = "#3cb878";
+            glyphicon[i].style.color ="#3cb878";
+
+            if (!list[i].checkValidity()) {
+                glyphicon[i].style.color ="red";
+                list[i].style.animationPlayState = "running";
+                list[i].style.borderColor = "red";
+
+                is = false;
             }
-        }
-        return true;
 
+        }
+
+        return is;
     }
-    function construireMail()
-    {
-        debugger
+
+
+    function construireMail() {
+
         //INITIALISATIONS
         mail = 'mailto:justine@wildcodeschool.fr';
         subject = "subject=Inscription formation Swift/iOS_" + document.getElementById("iNnom").value
-        my_body = document.getElementById("content").value
+        my_body = escape(document.getElementById("content").value)
         var str = ""
         var myName = document.getElementById("iNnom").value
+        var myPren = document.getElementById("iPren").value
         var urlG = document.getElementById("urlG").value
         var urlk = document.getElementById("urlk").value
         var tel = document.getElementById("tel").value
         var myMail = document.getElementById("mail").value
         //CONSTRUCTION DE LA CHAINE DE CARACTÈRE
-        str = mail
-            + "?" + subject
-            + "&body=" + "Hello, je souhaite suivre la formation intensive Swift / iOS. " + newLine
-            + my_body + newLine
+        str = mail +
+            "?" + subject +
+            "&body=" + escape("Hello, je souhaite suivre la formation intensive Swift / iOS. ") + newLine +
+            my_body + newLine
 
 
         // console.log(str)
-        if (urlG != "" || urlk != "")
-        {
-            str = str
-                + "Voici mon profil GitHub et/ou Linkedin :" + newLine
-                + urlG + newLine
-                + urlk + newLine
+        if (urlG != "" || urlk != "") {
+            str = str +
+                "Voici mon profil GitHub et/ou Linkedin :" + newLine +
+                urlG + newLine +
+                urlk + newLine
         }
-        str = str + newLine + newLine+ myName + newLine +"Tel  : "+ tel + newLine + "Email  : "+myMail + newLine
+        str = str + newLine + newLine + myName + " " + myPren + newLine + "Tel  : " + tel + newLine + "Email  : " + myMail + newLine
         console.log(str)
         return str;
     }
 
     btInscrip.addEventListener("click",
-        function (e) 
-        {
+        function (e) {
+
             // console.log("click inscription")
             var a = document.createElement('a');
             // console.log(construireMail())
-            a.href = construireMail()
-            // console.log(a.href)
-            if (check(inputsOblig))
-            {
-                a.click();
-                window.location.href = '#close';
 
+            a.setAttribute("href", construireMail());
+
+            if (check(inputsOblig)) {
+                document.location = a
+                window.location.href = '#close';
                 e.preventDefault();
             }
 
